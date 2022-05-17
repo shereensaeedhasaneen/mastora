@@ -1,0 +1,17 @@
+$mainCol: #b68b25;
+$txtCol: #454545;
+$green-btn:#289a43;
+::selection {
+    background: $mainCol;
+    color: #fff;
+}
+
+@import './layout/_header.scss';
+@import './layout/table';
+@import './layout/right-side';
+@import './layout/login-form';
+@import './layout/footer';
+@import './layout/details';
+@import './layout/printStyle';
+@import './layout/global';
+@import './layout/preloader'

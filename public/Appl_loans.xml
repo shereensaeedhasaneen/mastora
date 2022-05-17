@@ -1,0 +1,107 @@
+<soapenv:Envelope xmlns:q0="urn:ifxforum-org:XSD:1"
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<application xmlns="http://sv.bpc.in/SVAP">			<!--Static-->
+			<application_type>APTPISSA</application_type>			<!--Static-->
+			<application_flow_id>1001</application_flow_id>			<!--Static-->
+			<application_status>APST0002</application_status>			<!--Static-->
+			<operator_id>ADMIN</operator_id>			<!--Static-->
+			<institution_id>2001</institution_id>			<!--Static-->
+			<agent_id>50000005</agent_id>			<!--Static-->
+			<customer_type>ENTTPERS</customer_type>			<!--Static-->
+			<appl_prioritized>0</appl_prioritized>			<!--Static-->
+			<customer id="cust_1">				<!--Static-->
+				<command>CMMDCRUP</command>				<!--Static-->
+				<customer_number>MST10002</customer_number>				<!--Povided by portal-->
+				<customer_relation>RSCBEXTR</customer_relation>				<!--Static-->
+				<contract>					<!--Static-->
+					<command>CMMDCREX</command>					<!--Static-->
+					<contract_type>CNTPCDCR</contract_type>					<!--Static-->
+					<product_id>50000001</product_id>					<!--Static-->
+					<service value="50000584">						<!--Static-->
+						<service_object ref_id="account_1">							<!--Static-->
+							<attribute_fee value="50000565">								<!--Admin Fees, if there is any admin fees will be provided in this block-->
+								<fee_rate_calc>FEEM0002</fee_rate_calc>								<!--Static-->
+								<fee_base_calc>FEEB0001</fee_base_calc>								<!--Static-->
+								<fee_fixed_value>0</fee_fixed_value>								<!--Fee value Povided by portal-->
+								<currency>818</currency>								<!--Static-->
+							</attribute_fee>
+						</service_object>
+					</service>
+					<service value="50000587">						<!--Static-->
+						<service_object ref_id="account_1">							<!--Static-->
+							<attribute_num value="10000888">								<!--count of installments, this decideds how many installements will be created, 0-999-->
+								<attribute_value_num>6</attribute_value_num>								<!--Povided by portal-->
+							</attribute_num>
+							<attribute_fee value="50000559">								<!--Loand ammount-->
+								<fee_rate_calc>FEEM0002</fee_rate_calc>								<!--Static-->
+								<fee_base_calc>FEEB0001</fee_base_calc>								<!--Static-->
+								<fee_fixed_value>4500000</fee_fixed_value>								<!--Povided by portal-->
+								<currency>818</currency>								<!--Static-->
+							</attribute_fee>
+							<attribute_cycle value="10000890">								<!--first installments date! after how many months, the first installement will be billed -->
+								<cycle_length_type>LNGT0004</cycle_length_type>								<!--Static, month type-->
+								<cycle_length>8</cycle_length>								<!--Povided by portal-->
+							</attribute_cycle>
+						</service_object>
+					</service>
+					<service value="50000586">						<!--Static-->
+						<service_object ref_id="cust_1">							<!--Static-->
+						</service_object>
+					</service>
+					<account id="account_1" value="Account 1">						<!--Static-->
+						<command>CMMDCRUP</command>						<!--Static-->
+						<currency>818</currency>						<!--Static-->
+						<account_type>ACTP0130</account_type>
+					</account>
+				</contract>
+				<person >
+					<command>CMMDCRUP</command>
+					<person_name language="LANGENG">						<!--Static-->
+						<first_name>Full name</first_name>						<!--Full name for the berrower !-->
+					</person_name>
+					<identity_card >
+						<command>CMMDCRUP</command>
+						<id_type>IDTP0045</id_type>						<!--Static, The National ID number -->
+						<id_number>N12234563</id_number>						<!--Povided by portal-->
+					</identity_card>
+				</person>
+				<contact>
+					<command>CMMDCRUP</command>
+					<contact_type>CNTTNTFC</contact_type>					<!--Static-->
+					<contact_data>
+						<commun_method>CMNM0001</commun_method>						<!--Static-->
+						<commun_address>0100000000</commun_address>						<!--Povided by portal-->
+					</contact_data>
+				</contact>
+				<address >
+					<command>CMMDCRUP</command>					<!--Static-->
+					<address_type>ADTPHOME</address_type>					<!--Static-->
+					<country>818</country>					<!--Static-->
+					<address_name language="LANGENG">						<!--Static-->
+						<region>Region</region>						<!--Povided by portal, optional-->
+						<city>City</city>						<!--Povided by portal, optional-->
+						<street>Street</street>						<!--Povided by portal, optional-->
+					</address_name>
+					<house>House num</house>					<!--Povided by portal, optional-->
+				</address>
+			</customer>
+
+			<cst_id_card_1>ID Card 1</cst_id_card_1>			<!--Povided by portal, optional-->
+			<cst_id_card_2>ID Card 2</cst_id_card_2>			<!--Povided by portal, optional-->
+			<cst_residential_receipt>Residential Receipt</cst_residential_receipt>			<!--Povided by portal, optional-->
+			<cst_rent_contract>Rent Contract</cst_rent_contract>			<!--Povided by portal, optional-->
+			<cst_pricing_offer>Pricing offer</cst_pricing_offer>			<!--Povided by portal, optional-->
+			<cst_additional_doc1>Additional Documents 1</cst_additional_doc1>			<!--Povided by portal, optional-->
+			<cst_additional_doc2>Additional Documents 2</cst_additional_doc2>			<!--Povided by portal, optional-->
+			<cst_additional_doc3>Additional Documents 3</cst_additional_doc3>			<!--Povided by portal, optional-->
+			<cst_additional_doc4>Additional Documents 4</cst_additional_doc4>			<!--Povided by portal, optional-->
+			<cst_additional_doc5>Additional Documents 5</cst_additional_doc5>			<!--Povided by portal, optional-->
+
+		</application>
+
+	</soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,75 @@
+.third-in-print{
+    display: none;
+}
+.pageBreak{
+    display: none;
+}
+@media print{
+    // #footer {color: #fff  !important}
+    // #header {color: #fff !important}
+    footer{
+        img{
+            width: 60%;
+        }
+    }
+    .acptssss{
+        display: none !important;
+    }
+    .under-btns ,.side-bar-dashboard{
+        display: none !important;
+    }
+    @page{
+        size:portrait;// Portrait;
+        margin: 0 !important;
+      //  orientation:portrait !important;
+    }
+    .pageBreak{
+        display: block;
+    }
+    .break{
+        page-break-before: always !important;
+    }
+    .second-container{
+        .edit{
+            display: none;
+        }
+    }
+
+    .third-container{
+        display: none;
+    }
+    .buttonload{
+        width: 100%;
+    }
+
+    .third-in-print{
+        display: block;
+        background: #fff;
+        border-radius: 16px;
+        border: 1px solid $txtCol;
+
+        h1{
+            font-family: 'Tajawal';
+            color: $mainCol;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 15px;
+        }
+        .edit{
+            display: none;
+        }
+    }
+    .dropdown-toggle::after{
+        display: none;
+    }
+
+    .pagebreak{
+        page-break-before: always !important;
+    }
+
+    table {
+       // page-break-after:always;
+        page-break-after:always,
+          }
+}

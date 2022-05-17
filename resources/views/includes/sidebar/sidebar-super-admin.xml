@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sidebar>
+    <menuItem name="Dashboard" faIcon="cil-speedometer" classes="">
+        <activeState>
+            <attribute name="routes">
+                <item value="dashboard.index"/>
+            </attribute>
+        </activeState>
+        <subMemu>
+            <item routeName="dashboard.index" permission="retrieve dashboard" title="Admin Dashboard"/>
+        </subMemu>
+    </menuItem>
+    <menuItem name="Fans" faIcon="cil-people" classes="">
+        <activeState>
+            <attribute name="routes">
+                <item value="fan.index"/>
+            </attribute>
+        </activeState>
+        <subMemu>
+            <item routeName="fan.index" permission="retrieve user" title="All Fans"/>
+        </subMemu>
+    </menuItem>
+    <menuItem name="Talents" faIcon="cil-people" classes="">
+        <activeState>
+            <attribute name="routes">
+                <item value="talent.index"/>
+            </attribute>
+        </activeState>
+        <subMemu>
+            <item routeName="talent.index" permission="retrieve talent" title="All Talents"/>
+        </subMemu>
+    </menuItem>
+    <menuItem name="Requests" faIcon="cil-people" classes="">
+        <activeState>
+            <attribute name="routes">
+                <item value="request.index"/>
+            </attribute>
+        </activeState>
+        <subMemu>
+            <item routeName="request.index" permission="retrieve request" title="All Requests"/>
+        </subMemu>
+    </menuItem>
+    <menuItem name="Videos" faIcon="cil-people" classes="">
+        <activeState>
+            <attribute name="routes">
+                <item value="video.index"/>
+            </attribute>
+        </activeState>
+        <subMemu>
+            <item routeName="video.index" permission="retrieve video" title="All Videos"/>
+        </subMemu>
+    </menuItem>
+    <menuItem name="Payments" faIcon="cil-people" classes="">
+        <activeState>
+            <attribute name="routes">
+                <item value="payment.index"/>
+            </attribute>
+        </activeState>
+        <subMemu>
+            <item routeName="payment-log.index" permission="retrieve request-payment-calculation-log" title="All Payments"/>
+            <item routeName="import.index" permission="retrieve import" title="All Imports"/>
+        </subMemu>
+    </menuItem>
+</sidebar>

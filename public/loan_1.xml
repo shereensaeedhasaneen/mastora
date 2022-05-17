@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Static-->
+<application xmlns="http://sv.bpc.in/SVAP"><!--Static-->
+	<application_type>APTPISSA</application_type><!--Static-->
+	<application_flow_id>1001</application_flow_id><!--Static-->
+	<application_status>APST0002</application_status><!--Static-->
+	<operator_id>ADMIN</operator_id><!--Static-->
+	<institution_id>2001</institution_id><!--Static-->
+	<agent_id>50000005</agent_id><!--Static-->
+	<customer_type>ENTTPERS</customer_type><!--Static-->
+	<appl_prioritized>0</appl_prioritized><!--Static-->
+	<customer id="cust_1"><!--Static-->
+		<command>CMMDCRUP</command><!--Static-->
+		<customer_number>00001</customer_number><!--Povided by portal-->
+		<customer_relation>RSCBEXTR</customer_relation><!--Static-->
+		<contract><!--Static-->
+			<command>CMMDCREX</command><!--Static-->
+			<contract_type>CNTPCDCR</contract_type><!--Static-->
+			<product_id>50000001</product_id><!--Static-->
+			<service value="50000584"><!--Static-->
+				<service_object ref_id="account_1"><!--Static-->
+					<attribute_fee value="50000565"> <!--Admin Fees, if there is any admin fees will be provided in this block--> 
+						<fee_rate_calc>FEEM0002</fee_rate_calc><!--Static-->
+						<fee_base_calc>FEEB0001</fee_base_calc><!--Static-->
+						<fee_fixed_value>1820000</fee_fixed_value><!--Fee value Povided by portal-->
+						<currency>818</currency><!--Static-->
+					</attribute_fee>
+				</service_object>
+			</service>
+			<service value="50000587"><!--Static-->
+				<service_object ref_id="account_1"><!--Static-->
+					<attribute_num value="10000888"> <!--count of installments, this decideds how many installements will be created, 0-999-->
+						<attribute_value_num>6</attribute_value_num><!--Povided by portal-->
+					</attribute_num>
+					<attribute_fee value="50000559"><!--Loand ammount-->
+						<fee_rate_calc>FEEM0002</fee_rate_calc><!--Static-->
+						<fee_base_calc>FEEB0001</fee_base_calc><!--Static-->
+						<fee_fixed_value>20000</fee_fixed_value><!--Povided by portal-->
+						<currency>818</currency><!--Static-->
+					</attribute_fee>
+					<attribute_cycle value="10000890"><!--first installments date! after how many months, the first installement will be billed -->
+						<cycle_length_type>LNGT0004</cycle_length_type><!--Static, month type-->
+						<cycle_length>12</cycle_length> <!--Povided by portal-->
+					</attribute_cycle>
+				</service_object>
+			</service>
+			<service value="50000586"><!--Static-->
+				<service_object ref_id="cust_1"><!--Static-->
+				</service_object>
+			</service>
+			<account id="account_1" value="Account 1"><!--Static-->
+				<command>CMMDCRUP</command><!--Static-->
+				<currency>818</currency><!--Static-->
+				<account_type>ACTP0130</account_type>
+			</account>
+		</contract>
+		<person>
+			<command>CMMDCRUP</command>
+			<person_name language="ARABIC"><!--Static-->
+				<first_name>منى عبدااله حسين</first_name><!--Full name for the berrower !-->
+			</person_name>
+			<identity_card>
+				<command>CMMDCRUP</command>
+				<id_type>IDTP0045</id_type><!--Static, The National ID number -->
+				<id_number>27856412083313</id_number><!--Povided by portal-->
+			</identity_card>
+		</person>
+		<contact>
+			<command>CMMDCRUP</command>
+			<contact_type>CNTTNTFC</contact_type><!--Static-->
+			<contact_data>
+				<commun_method>CMNM0001</commun_method><!--Static-->
+				<commun_address>0100000000</commun_address><!--Povided by portal-->
+			</contact_data>
+		</contact>
+		<address>
+			<command>CMMDCRUP</command><!--Static-->
+			<address_type>ADTPHOME</address_type><!--Static-->
+			<country>818</country><!--Static-->
+			<address_name language="ARABIC"><!--Static-->
+				<region>القاهره</region><!--Povided by portal, optional-->
+				<city>القاهره</city><!--Povided by portal, optional-->
+				<street> عباس العقاد </street><!--Povided by portal, optional-->
+			</address_name>
+			<house>14</house><!--Povided by portal, optional-->
+		</address>
+	</customer>
+	
+	<cst_id_card_1>http://cp.tamweelmisr.com/LoanImages/01/nationalId1/</cst_id_card_1><!--Povided by portal, optional-->
+    <cst_id_card_2>http://cp.tamweelmisr.com/LoanImages/01/nationalId2/</cst_id_card_2><!--Povided by portal, optional-->
+	<cst_residential_receipt>http://cp.tamweelmisr.com/LoanImages/01/ResidentialReceipt</cst_residential_receipt><!--Povided by portal, optional-->
+	<cst_rent_contract>http://cp.tamweelmisr.com/LoanImages/01/RentContract</cst_rent_contract><!--Povided by portal, optional-->
+	<cst_pricing_offer>http://cp.tamweelmisr.com/LoanImages/01/PricingOffer</cst_pricing_offer><!--Povided by portal, optional-->
+	<cst_additional_doc1>http://cp.tamweelmisr.com/LoanImages/01/AdditionalDocuments1</cst_additional_doc1><!--Povided by portal, optional-->
+	<cst_additional_doc2>http://cp.tamweelmisr.com/LoanImages/01/AdditionalDocuments2</cst_additional_doc2><!--Povided by portal, optional-->
+	<cst_additional_doc3>http://cp.tamweelmisr.com/LoanImages/01/AdditionalDocuments3</cst_additional_doc3><!--Povided by portal, optional-->
+	<cst_additional_doc4>http://cp.tamweelmisr.com/LoanImages/01/AdditionalDocuments4</cst_additional_doc4><!--Povided by portal, optional-->
+	<cst_additional_doc5>http://cp.tamweelmisr.com/LoanImages/01/AdditionalDocuments5</cst_additional_doc5><!--Povided by portal, optional-->
+
+</application>
